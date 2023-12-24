@@ -6,6 +6,26 @@ public class Car {
     private String driver;
     public int speed;
 
+    public Car() {
+        this.doors = "closed";
+        this.engine = "off";
+        this.driver = "seated";
+    }
+
+    public Car(String d, String e, String s) {
+        this.doors = d;
+        this.engine = e;
+        this.driver = s;
+    }
+
+    //copy constructor
+    public Car(Car c){
+        doors = c.doors;
+        engine = c.engine;
+        driver = c.driver;
+        speed = c.speed;
+    }
+
     public String getDoors() {
         return doors;
     }

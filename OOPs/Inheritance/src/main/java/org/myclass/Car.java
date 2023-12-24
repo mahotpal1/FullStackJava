@@ -1,10 +1,35 @@
 package org.myclass;
 
-public class Car {
+public class Car extends Vehicle{
     private String doors;
     private String engine;
     private String driver;
     public int speed;
+    public String steering;
+    public String musicSystem;
+    public String airConditioner;
+    public String fridge;
+    public String entertainmentSystem;
+
+    public Car() {
+        this.doors = "closed";
+        this.engine = "off";
+        this.driver = "seated";
+    }
+
+    public Car(String d, String e, String s) {
+        this.doors = d;
+        this.engine = e;
+        this.driver = s;
+    }
+
+    //copy constructor
+    public Car(Car c){
+        doors = c.doors;
+        engine = c.engine;
+        driver = c.driver;
+        speed = c.speed;
+    }
 
     public String getDoors() {
         return doors;
